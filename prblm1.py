@@ -1,8 +1,8 @@
 def word_potential(stmnt):
     """proggram to arrange a sentence in a way that their potential
     will be in increading order"""
-    terminators = [",", ".", "?", "!"]
-    if stmnt[-1] in terminators:
+    terminators = (",", ".", "?", "!")
+    if stmnt.endswith(terminators):
         stmnt = stmnt[0:-1]
         list_of_word = stmnt.split()
         word_potential = {}
