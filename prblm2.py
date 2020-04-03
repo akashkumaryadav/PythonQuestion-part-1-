@@ -8,7 +8,6 @@ centerValue = input("third charachter")
 if row and col > 3 and row and col < 10:
     cr = cc = 0
     corners = [(0, 0), (0, row-1), (col-1, 0), (row-1, col-1)]
-    center = cr > 0 and cr < row-1 and cc > 0 and cc < col-1
     sqmatrix = np.array(range(row*col), dtype=str).reshape(row, col)
 
     # filling the matrix with data
