@@ -24,12 +24,13 @@ class Queue():
             element = self._queue[self.front]
             self._queue.remove(element)
             self.front -= 1
+            self.size += 1
+            self.rear += 1
             print(element)
             return element
         else:
             print("Underflow")
             return -9999
-        print(self._queue)
 
 
 queue = Queue(100)

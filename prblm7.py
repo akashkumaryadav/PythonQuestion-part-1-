@@ -31,7 +31,7 @@ class Register:
             print("register is empty")
 
 
-s = Register(3)
+s = Register(4)
 s.push("1")
 s.push("2")
 s.push("3")
