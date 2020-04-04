@@ -9,23 +9,27 @@ class Performance():
         self.marks = [random.randint(0, 100) for _ in range(number)]
 
     def getmode(self):
+        return self.mode
+
+    def getfreqatmode(self):
+        return self.frequency
+
+    def calcmodeandfrequency(self):
+        self.freq_table = {}
         MAX = max(self.freq_table.values())
         self.mode = 0
         for marks, freq in self.freq_table.items():
             if freq == MAX:
                 if marks > self.mode:
                     self.mode = marks
-        return self.mode
-
-    def getfreqatmode(self):
-        self.frequency = 0
+                    self.frequency = freq
+        MAX = max(self.freq_table.values())
+        self.mode = 0
         for marks, freq in self.freq_table.items():
-            if self.mode == marks:
-                self.frequency = freq
-        return self.frequency
-
-    def calcmodeandfrequency(self):
-        self.freq_table = {}
+            if freq == MAX:
+                if marks > self.mode:
+                    self.mode = marks
+                    self.frequency = freq
         for m in self.marks:
             self.freq_table[m] = self.marks.count(m)
 
