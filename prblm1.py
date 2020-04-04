@@ -23,6 +23,9 @@ def word_potential(stmnt):
         for _ in range(word_potential[key][-1]):
             print(f"{word_potential[key][0].ljust(10)}{key}")
             finalstmnt += " "+word_potential[key][0]
+    print("Potential =", end="")
+    for key, potential in word_potential.items():
+        print(f"{key}+", end="")
     return finalstmnt.lstrip()
 
 
