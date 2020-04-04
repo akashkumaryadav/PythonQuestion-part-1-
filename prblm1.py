@@ -33,10 +33,9 @@
 
 
 from functools import reduce
-from operator import add
 
 
-def strength(x): return reduce(add, x)
+def strength(w): return reduce(lambda x, y: x + y, w)
 
 
 statement = "HOW DO YOU DO?"
