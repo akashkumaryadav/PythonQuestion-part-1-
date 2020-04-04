@@ -16,22 +16,15 @@ class Performance():
 
     def calcmodeandfrequency(self):
         self.freq_table = {}
-        MAX = max(self.freq_table.values())
-        self.mode = 0
-        for marks, freq in self.freq_table.items():
-            if freq == MAX:
-                if marks > self.mode:
-                    self.mode = marks
-                    self.frequency = freq
-        MAX = max(self.freq_table.values())
-        self.mode = 0
-        for marks, freq in self.freq_table.items():
-            if freq == MAX:
-                if marks > self.mode:
-                    self.mode = marks
-                    self.frequency = freq
         for m in self.marks:
             self.freq_table[m] = self.marks.count(m)
+        MAX = max(self.freq_table.values())
+        self.mode = 0
+        for marks, freq in self.freq_table.items():
+            if freq == MAX:
+                if marks > self.mode:
+                    self.mode = marks
+                    self.frequency = freq
 
 
 cls = Performance()
